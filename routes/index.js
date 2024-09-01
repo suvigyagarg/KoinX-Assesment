@@ -1,5 +1,5 @@
 import { Router } from "express";
-import EtherumPriceRoutes from "./EtherumPrice/index.js";
+import EtherumPriceRoutes from "./etherumPrice/index.js";
 import UserTransactionRoutes from "./userTransactions/index.js";
 import UserDetailsRoutes from "./userDetails/index.js";
 const RouteHandler =Router();
