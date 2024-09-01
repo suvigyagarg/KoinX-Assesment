@@ -26,6 +26,12 @@ application.get("/health",(req,res)=>
         message: "Working!",
       }),
 )
+application.get("/", (req, res) =>
+    res.status(200).json({
+      status: 200,
+      message: "Welcome to KoinX!",
+    }),
+  );
 application.use("/api", MountAPI());
 
 application.use("*", (req, res) =>
