@@ -31,9 +31,9 @@ To set up the project locally, follow these steps:
   ```
 3.**Start the server:**
 
-    ```bash
+ ```bash
       npm start
-      ```
+ ```
 
 ## API Endpoints
 
