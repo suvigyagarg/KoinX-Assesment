@@ -16,20 +16,19 @@ export const GetUserDetails = async (data) => {
        };
        const result = response.data.result;
 
-       const userEntry=  await UserTransaction.findOneAndUpdate(
+       const userTransactions=  await UserTransaction.findOneAndUpdate(
         { userAddress: userAddress },
         { $set: { transactions: result } },
         { upsert: true, new: true }
     );
      
-     const transactions = userEntry.transactions;
+     const transactions = userTransactions.transactions;
     const totalExpenses = transactions.reduce((sum, tx) => {
         const gasUsed = parseFloat(tx.gas);
         const gasPrice = parseFloat(tx.gasPrice);
         return (sum +((gasUsed * gasPrice) / 1e18)) ;
     }, 0);
   
-
     const ethereumPrice = await EthereumPrice.findOne().sort({createdAt : -1}).exec();
         
         return {
