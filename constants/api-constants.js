@@ -1,0 +1,2 @@
+export const  GET_TRANSACTIONS = "https://api.etherscan.io/api?module=account&action=txlist&startblock=0&endblock=99999999&sort=asc"
+export const  ETHEREUM_PRICE_API = "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=inr"
