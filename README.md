@@ -39,13 +39,13 @@ To set up the project locally, follow these steps:
 
 1. **Get All User Transactions**
 
-   - **Endpoint:** `/api/user-transactions?userAddress=`
+   - **Endpoint:** `/api/user-transactions?userAddress=<userAddress>`
    - **Method:** GET
    - **Description:** Fetch all user transactions for a given user address.
 
 2. **Get User Details**
 
-   - **Endpoint:** `/api/user-details?userAddress=`
+   - **Endpoint:** `/api/user-details?userAddress=<userAddress>`
    - **Method:** GET
    - **Description:** Fetch the value of the user's total expenses and the current value of Ethereum in INR.
 
